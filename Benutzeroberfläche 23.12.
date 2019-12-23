@@ -1,0 +1,11 @@
+public class Benutzeroberflaeche_23_12_10_30 {
+
+public static void main (String [] args) {
+		
+	Fenster_23_12_10_30 meinFenster = new Fenster_23_12_10_30 ("");
+	// ProduktHinzufuegenActionListener meinNeuesProdukt = new ProduktHinzufuegenActionListener ("Produkt hinzufügen:");
+	Produktansicht meineProduktansicht = new Produktansicht ("Produktansicht");
+	
+	} // public static void main
+
+} // public class Benutzeroberflaeche_23_12_10_30
