@@ -27,8 +27,12 @@ public class Fenster_23_12_10_30 extends JFrame {
 	private JButton buttonKategorienBearbeiten;
 	private JButton buttonSuche;
 	
+	private int anzahl;
+	
 	// Ansicht des Fensters
-	public Fenster_23_12_10_30 (String titel) {
+	public Fenster_23_12_10_30 (String titel, int anzahl) {
+		
+		this.anzahl = anzahl;
 		
 		setTitle (titel);
 		setDefaultCloseOperation (DISPOSE_ON_CLOSE); // soll nach Schliessen im Hintergrund weiter laufen
@@ -67,7 +71,7 @@ public class Fenster_23_12_10_30 extends JFrame {
 		labelStueckpreis = new JLabel ("Stückpreis");
 		labelGewicht = new JLabel ("Gewicht");
 		labelKategorie = new JLabel ("Kategorie");
-		labelAnzahl = new JLabel ("Anzahl");
+		labelAnzahl = new JLabel ("Anzahl: " + anzahl);
 		labelLagernummer = new JLabel ("Lagernummer");
 		
 		// Textfeld
@@ -84,7 +88,7 @@ public class Fenster_23_12_10_30 extends JFrame {
 				
 				String begriff = fieldBegriff.getText();
 				
-				ProduktHinzufuegenActionListener meinNeuesProdukt = new ProduktHinzufuegenActionListener ("Produkt hinzufügen:");
+				ProduktHinzufuegenActionListener meinNeuesProdukt = new ProduktHinzufuegenActionListener ("Produkt hinzufügen:", anzahl);
 				
 				
 			} // public void actionPerformed (ActionEvent e)
@@ -97,7 +101,7 @@ public class Fenster_23_12_10_30 extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
 				
-				Kategorien meineKategorien = new Kategorien ("Kategorien:");
+				Kategorien meineKategorien = new Kategorien ("Kategorien:", anzahl);
 				
 			} // public void actionPerformed(ActionEvent e)
 			
