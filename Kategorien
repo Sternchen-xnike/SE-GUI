@@ -17,8 +17,12 @@ public class Kategorien extends JFrame {
 	private JButton buttonOk;
 	private JButton buttonLoeschen;
 	
+	private int anzahl;
+	
 	// Ansicht des Fensters
-	public Kategorien(String titel){
+	public Kategorien(String titel, int anzahl){
+		
+		this.anzahl = anzahl;
 		
 		setTitle (titel);
 		setDefaultCloseOperation (DISPOSE_ON_CLOSE); // Fenster wird mit Klick auf X geschlossen
