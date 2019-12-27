@@ -28,8 +28,12 @@ public class ProduktHinzufuegenActionListener extends JFrame {
 	//Button
 	private JButton buttonProduktHinzufuegen;
 	
+	private int anzahl;
+	
 	// Ansicht des Fensters
-	public ProduktHinzufuegenActionListener(String titel){
+	public ProduktHinzufuegenActionListener(String titel, int anzahl){
+		
+		this.anzahl = anzahl;
 		
 		setTitle (titel);
 		setDefaultCloseOperation (DISPOSE_ON_CLOSE); // Fenster wird mit Klick auf X geschlossen
@@ -64,19 +68,19 @@ public class ProduktHinzufuegenActionListener extends JFrame {
 
 	private void initComponents() {
 	
-		labelProduktname = new JLabel ("Produktname");
-		labelGewicht = new JLabel ("Gewicht");
-		labelStueckpreis = new JLabel ("Stückpreis");
-		labelKategorie = new JLabel ("Kategorie");
-		labelNeueKategorie = new JLabel ("neue Kategorie");
-		labelLagernummer = new JLabel ("Lagernummer");
-		labelAnzahl = new JLabel ("Anzahl");		
+		labelProduktname = new JLabel ("Produktname: ");
+		labelGewicht = new JLabel ("Gewicht (in kg): ");
+		labelStueckpreis = new JLabel ("Stückpreis (in €): ");
+		labelKategorie = new JLabel ("Kategorie: ");
+		labelNeueKategorie = new JLabel ("neue Kategorie: ");
+		labelLagernummer = new JLabel ("Lagernummer: ");
+		labelAnzahl = new JLabel ("Anzahl: ");		
 		
-		fieldProduktname = new JTextField (50); // Groesse aenderbar
+		fieldProduktname = new JTextField (25); // Groesse aenderbar
 		fieldGewicht = new JTextField (5);
-		fieldStueckpreis= new JTextField (50);
-		fieldKategorie = new JTextField (50);
-		fieldNeueKategorie = new JTextField (50);
+		fieldStueckpreis= new JTextField (25);
+		fieldKategorie = new JTextField (25);
+		fieldNeueKategorie = new JTextField (25);
 		fieldLagernummer = new JTextField (6);
 		fieldAnzahl = new JTextField (3);
 		
