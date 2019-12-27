@@ -1,4 +1,6 @@
 import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -30,8 +32,12 @@ public class Produktansicht extends JFrame {
 	private JButton buttonOk;
 	private JButton buttonProduktLoeschen;
 	
+	private int anzahl;
+	
 	// Ansicht des Fensters
-	public Produktansicht(String titel){
+	public Produktansicht(String titel, int anzahl){
+		
+		this.anzahl = anzahl;
 		
 		setTitle (titel);
 		setDefaultCloseOperation (DISPOSE_ON_CLOSE); // Fenster wird mit Klick auf X geschlossen
@@ -68,12 +74,12 @@ public class Produktansicht extends JFrame {
 
 	private void initComponents() {
 	
-		labelProduktname = new JLabel ("Produktname");
-		labelGewicht = new JLabel ("Gewicht");
-		labelStueckpreis = new JLabel ("Stückpreis");
-		labelKategorie = new JLabel ("Kategorie");
-		labelLagernummer = new JLabel ("Lagernummer");
-		labelAnzahl = new JLabel ("Anzahl");	
+		labelProduktname = new JLabel ("Produktname: ");
+		labelGewicht = new JLabel ("Gewicht (in kg): ");
+		labelStueckpreis = new JLabel ("Stückpreis ( in €) : ");
+		labelKategorie = new JLabel ("Kategorie: ");
+		labelLagernummer = new JLabel ("Lagernummer: ");
+		labelAnzahl = new JLabel ("Anzahl: " + anzahl);	
 		labelArtikelHinzufuegen = new JLabel ("Artikel hinzufügen:");
 		labelArtikelEntnehmen = new JLabel ("Artikel entnehmen:");
 		
@@ -87,6 +93,30 @@ public class Produktansicht extends JFrame {
 		
 		buttonOk = new JButton ("Ok");
 		buttonProduktLoeschen = new JButton ("Produkt löschen");
+		
+		buttonOk.addActionListener(new ActionListener () {
+			
+			@Override
+			public void actionPerformed(ActionEvent arg0) { // gibt es nicht was zurueck
+				// TODO Auto-generated method stub
+				
+				String artikelHinzufuegenString = fieldArtikelHinzufuegen.getText();
+				System.out.println(artikelHinzufuegenString);
+				if (artikelHinzufuegenString != "") { // enthaelt einen Eintrag
+					 // darf nur eine Zahl eingeben! int artikelHinzufuegenInt = Integer.parseInt(artikelHinzufuegenString);
+				
+				
+				} //
+				int neueAnzahl;
+				// int artikelHinzufuegen = Integer.parseInt(fieldArtikelHinzufuegen.getText());
+				
+				
+			}// public void actionPerformed(ActionEvent arg0)
+			
+			
+			
+		}); // buttonOk.addActionListener (new ActionListener () 
+		
 		
 	 } //private void initComponents()
 	
