@@ -5,54 +5,51 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
-public class Kategorien extends JFrame {
+@SuppressWarnings("serial")
+public class category extends JFrame {
 
-	//Text
-	private JLabel labelKategorieHinzufuegen;
+	// text
+	private JLabel labelAddCategory;
 	
-	// Textfeld
-	private JTextField fieldKategorieHinzufuegen;
+	// text field
+	private JTextField fieldAddCategory;
 	
-	//Buttons
-	private JButton buttonOk;
-	private JButton buttonLoeschen;
+	// buttons
+	private JButton buttonOkay;
+	private JButton buttonDelete;
 	
-	private int anzahl;
-	
-	// Ansicht des Fensters
-	public Kategorien(String titel, int anzahl){
-		
-		this.anzahl = anzahl;
+	// view of the window
+	public category (String titel){
 		
 		setTitle (titel);
-		setDefaultCloseOperation (DISPOSE_ON_CLOSE); // Fenster wird mit Klick auf X geschlossen
+		setDefaultCloseOperation (DISPOSE_ON_CLOSE);  // click X to close the window
 		setLayout (new FlowLayout());
 		
-		setSize(500,500);
-		setResizable (false);
+		setSize(500,500); // Size: width, Length 
+		setResizable (false); // Employee can't change size
 		
 		initComponents();
 		
-		// Ansicht in der Grafik
-		add(buttonLoeschen);
-		add(labelKategorieHinzufuegen);
-		add(fieldKategorieHinzufuegen);
-		add(buttonOk);
+		// view in the graphic
+		add(buttonDelete);
+		add(labelAddCategory);
+		add(fieldAddCategory);
+		add(buttonOkay);
 		
-		setLocationRelativeTo(null);
-		setVisible(true);
+		setLocationRelativeTo(null); // Window appears in the middle of the screen
+		setVisible(true); // window is visible
 		
-	} // public Kategorie
+	} // public category
 
 	private void initComponents() {
 	
-		labelKategorieHinzufuegen = new JLabel ("Kategorie hinzufügen:");
+		labelAddCategory = new JLabel ("Kategorie hinzufügen:");
 		
-		fieldKategorieHinzufuegen = new JTextField (50); // Groesse aenderbar
+		fieldAddCategory = new JTextField (50); // Groesse aenderbar
 		
-		buttonOk = new JButton ("Ok");
-		buttonLoeschen = new JButton ("Löschen");
+		buttonOkay = new JButton ("Okay");
+		buttonDelete = new JButton ("Löschen");
 		
 	 } //private void initComponents()
 	
-} // public class Kategorie
+} // public class category
