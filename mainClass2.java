@@ -1,4 +1,5 @@
 
+
 public class mainClass2 {
 
 public static void main (String [] args) {
@@ -7,6 +8,7 @@ public static void main (String [] args) {
 	addProduct1 myProduct1 = new addProduct1 ();
 	category1 myCategory1 = new category1 ();
 	mainWindow1 myMainWindow1 = new mainWindow1 ();
+	exception1 myException1 = new exception1 ();
 	
 	} // public static void main
 
